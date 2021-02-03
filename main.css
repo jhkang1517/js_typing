@@ -1,3 +1,7 @@
 h1 {
     color: blue;
 }
+
+.pressed {
+    color: rgb(255, 187, 0);
+};
