@@ -1,7 +1,36 @@
+
+
 h1 {
     color: blue;
 }
 
-.pressed {
+ul {
+    width: 500px;
+    height: 300px;
+    margin-top: 0px;
+    color: gray;
+}
+
+.noneColor {
+    list-style:none;
+}
+
+section ul li{
+    /* display: inline-block; */
+    float: left;
+    list-style-type : disc;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+    transition: ease-in-out 0.125s;
+};
+
+
+
+section ul li.pressed {
     color: rgb(255, 187, 0);
 };
+
+
