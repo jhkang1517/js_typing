@@ -11,6 +11,14 @@ ul {
     color: gray;
 }
 
+.complete {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
 .noneColor {
     list-style:none;
 }
@@ -26,7 +34,6 @@ section ul li{
     margin-left: 0.2rem;
     transition: ease-in-out 0.125s;
 };
-
 
 
 section ul li.pressed {
