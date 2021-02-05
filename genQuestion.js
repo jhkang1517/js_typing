@@ -1,5 +1,7 @@
 const quest = document.querySelector(".question"); // 영향을 미칠 html 코드를 가져오고
-const questList = ["Hello World", "test2", "test3"] // 넣을 값들
+const questList = ["We have art in order not to die of the truth."
+                 , "We make a living by what we get, but we make a life by what we give."
+                 , "We know accurately only when we know little, with knowledge doubt increases."] // 넣을 값들
 
 const COMPLETE = "complete";
 const UNCOMPLETE = "uncomplete";

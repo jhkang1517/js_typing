@@ -13,8 +13,16 @@
         <section>
             <article class="question"></article>
             <form>
-                <input class="answer" type="text"/>
+                <!-- enter를 누르면 새로운 Question이 생기도록 -->
+                <input style="display:none;"/>
+                <input class="answer" type="text" placeholder="Try typing along the sentence above." autofocus/>
             </form>
+        </section>
+
+        <section>
+            <span>WPM </span><span class="grossWpm">0</span><span> / </span>
+            <span class="netWpm"></span>
+            <span class="acuuracy"></span>
         </section>
 
         <section>
@@ -807,6 +815,7 @@
 
         <script src="lightEffect.js"></script>
         <script src="genQuestion.js"></script>
+        <script src="typoCheck.js"></script>
         <script src="typing.js"></script>
     </body>
 </html>

@@ -1,39 +1,35 @@
-const aswr = document.querySelector(".answer");
+// const aswr = document.querySelector(".answer");
+let progressTime = 0; // 경과시간(초)
+const grsWpm = document.querySelector(".grossWpm");
 
-function resetColor(){
-    var step;
-    for (step = 0; step < quest.childNodes.length; step++) {
-        quest.children[step].className = UNCOMPLETE;
-    }
+
+function grossWpmChecker() {
+    const allTypedEntries = aswr.value.length;
+    const divStandard = 5;
+    const minuteStandard = 60;
+
+    return Math.floor(((allTypedEntries/divStandard)/(progressTime/minuteStandard)))
 }
 
-function updateAnswer() {
-    const checkList = aswr.value;
-    const lencheckList = checkList.length;
-    const nowPosition = checkList[lencheckList-1];
+function getTime() {
+    // const date = new Date();
+    // const second = date.getSeconds();
+    let resultWPM = 0 // 최종 WPM
 
-    resetColor();
-
-    var step;
-    for (step = 0; step < lencheckList; step++) {
-
-        if (quest.textContent[step] === checkList[step]) {
-            quest.children[step].className = COMPLETE;
-        } 
-         else {
-            quest.children[step].className = WRONG;
-        }
+    if (aswr.value === "") {
+        progressTime = 0;
+        grsWpm.innerText = 0;
+    } else {
+        progressTime = progressTime + 1;
+        resultWPM = grossWpmChecker();
+        grsWpm.innerText = resultWPM;
     }
 
-}
-
-function focusInput(){
-    aswr.addEventListener("keyup", updateAnswer)
-
+    // console.log(resultWPM);
 }
 
 function init() {
-    focusInput();
+    setInterval(getTime, 1000);
 }
 
 init();

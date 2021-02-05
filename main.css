@@ -23,6 +23,10 @@ ul {
     list-style:none;
 }
 
+.answer {
+    width: 500px;
+}
+
 section ul li{
     /* display: inline-block; */
     float: left;
