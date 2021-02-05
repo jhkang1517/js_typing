@@ -7,11 +7,28 @@ const COMPLETE = "complete";
 const UNCOMPLETE = "uncomplete";
 const WRONG = "wrong";
 
+function pressEnter(event) {
+    if(event.keyCode === 13){
+        resetQuest();
+        resetAnswer();
+        randomQuestList();
+    }
+}
 
 function genRandom() {
     const lenQuestList = questList.length; // index 접근을 위한 length check
     const number = Math.floor(Math.random() * lenQuestList);
     return number;
+}
+
+function resetAnswer() {
+    aswr.value = null;
+}
+
+function resetQuest() {
+    while (quest.hasChildNodes()){
+        quest.removeChild(quest.firstChild);
+    }
 }
 
 function randomQuestList() {
@@ -32,7 +49,7 @@ function randomQuestList() {
 }
 
 function init() {
-    randomQuestList();
+    randomQuestList(); 
 }
 
 init();

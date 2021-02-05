@@ -1,12 +1,13 @@
 // const aswr = document.querySelector(".answer");
 let progressTime = 0; // 경과시간(초)
+
 const grsWpm = document.querySelector(".grossWpm");
 
 
 function grossWpmChecker() {
     const allTypedEntries = aswr.value.length;
     const divStandard = 5;
-    const minuteStandard = 60;
+    const minuteStandard = 60;   
 
     return Math.floor(((allTypedEntries/divStandard)/(progressTime/minuteStandard)))
 }
@@ -20,7 +21,7 @@ function getTime() {
         progressTime = 0;
         grsWpm.innerText = 0;
     } else {
-        progressTime = progressTime + 1;
+        progressTime = progressTime + 0.1;
         resultWPM = grossWpmChecker();
         grsWpm.innerText = resultWPM;
     }
@@ -29,7 +30,7 @@ function getTime() {
 }
 
 function init() {
-    setInterval(getTime, 1000);
+    setInterval(getTime, 100);
 }
 
 init();

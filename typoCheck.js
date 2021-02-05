@@ -31,6 +31,7 @@ function updateAnswer() {
 
 function focusInput(){
     aswr.addEventListener("keyup", updateAnswer)
+    aswr.addEventListener("keydown", pressEnter)
 }
 
 function init() {
